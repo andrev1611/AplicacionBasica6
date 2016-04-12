@@ -98,6 +98,7 @@ como
         android:layout_height="wrap_content"></Spinner>
     <!-- boton personalizado -->
     <Button
+        android:id="@+id/btnpersonalizado"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_gravity="center_horizontal"

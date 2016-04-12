@@ -1,5 +1,6 @@
 package aplicacionbasica.app.andrevera.com.aplicacionbasica;
 
+import android.media.MediaPlayer;
 import android.support.annotation.StringDef;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -24,6 +25,9 @@ public class MainActivity extends AppCompatActivity {
     CheckBox cbmastercard,cbbcp;
     //spinner
     Spinner spinopciones;
+    //para los sonidos del boton
+    MediaPlayer mp;
+    Button btnpersonalizado;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -90,5 +94,15 @@ public class MainActivity extends AppCompatActivity {
         spinopciones=(Spinner)findViewById(R.id.spinopciones);
         ArrayAdapter<CharSequence> adapter= ArrayAdapter.createFromResource(this,R.array.opcionesspiner,android.R.layout.simple_spinner_item);
         spinopciones.setAdapter(adapter);
+
+        //boton sonidos
+        mp = MediaPlayer.create(this,R.raw.sonido);// creo el recurso
+        btnpersonalizado = (Button)findViewById(R.id.btnpersonalizado);
+        btnpersonalizado.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mp.start();//reproduce el sonido
+            }
+        });
     }
 }
