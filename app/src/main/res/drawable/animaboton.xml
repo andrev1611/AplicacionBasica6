@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- aqui decimos que imagen sera para tal estado
+     en este caso el btnpresionado para cuando state_pressed sea ture osea presionado
+     -->
+    <item
+        android:drawable="@drawable/btnpresionado"
+        android:state_pressed="true"></item>
+    <!-- este será para el estado por defecto -->
+    <item
+        android:drawable="@drawable/botonsinpress"></item>
+    <!-- entonces en el background del boton en el xml main le ponemos en lugar de la imagen
+     le ponemos este xml animaboton-->
+</selector>

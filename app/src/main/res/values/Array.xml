@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="opcionesspiner">
+            <item>opcion1</item>
+        <item>opcion2</item>
+        <item>opcion3</item>
+        <item>opcion4</item>
+    </string-array>
+</resources>

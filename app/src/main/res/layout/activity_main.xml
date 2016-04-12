@@ -1,16 +1,171 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
     tools:context="aplicacionbasica.app.andrevera.com.aplicacionbasica.MainActivity">
 
     <TextView
+        android:id="@+id/tvnombre"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
-</RelativeLayout>
+        android:text="Primera aplicación android"
+        android:layout_gravity="center_horizontal"
+        android:textSize="20sp"
+        android:textColor="#000"/>
+    <EditText
+        android:id="@+id/etnombre"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:hint="Ingrese su nombre"
+        android:layout_gravity="center_horizontal"/>
+<!--
+https://www.youtube.com/watch?v=upIg_Gzq1Ic&index=8&list=PLRRyJTxdPZVe3I-bECCnKoufiUkJrajNQ
+según en layout que usemos Linear o Relative
+habran propiedades de los elementos que se podrán usar
+como
+ android:layout_centerVertical="true"
+ que centra a un elemento
+ por ejemplo tambien esta propiedad
+  layout_above="@+id/ id del elemento" para poner algo sobre este elemento y asi más cosas
+
+  ABOVE ARRIBA - BELOW ABAJO - TORIGHTOF A LA DERECHA DE - TOLEFTOF A LA IZQUIERDA DE
+  estos de los costados le tenemos que poner la alineación
+  layout_alignBaseline="@+id/id del elemento" siempre con el id
+  para que se alinee en la misma linea de el elemento padre
+
+  ahora hay  uno para alinear un elemento abajo a la izquierda o derecha independientemente de otros elementos
+
+  alignParentBottom="true" esto lo pone abajo pero a la izq
+  y se queremos q lo mande a ala derecha
+    alignParentRight="true"
+-->
+    <Button
+        android:id="@+id/btnpresionar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Presionar"/>
+    <RadioGroup
+        android:id="@+id/rgopciones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/rbpaypal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PayPal"/>
+        <RadioButton
+            android:id="@+id/rbvisa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Visa"/>
+    </RadioGroup>
+    <CheckBox
+        android:id="@+id/cbmastercard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Master Card"/>
+    <CheckBox
+        android:id="@+id/cbbcp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Banco"/>
+
+    <Button
+        android:id="@+id/btnopciones"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Opciones"/>
+    <TextView
+        android:id="@+id/tvopcion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selección"
+        android:layout_gravity="center_horizontal"/>
+    <!--uso de spinner -->
+    <TextView
+        android:id="@+id/tvspinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="Uso de Spinner"
+        android:layout_gravity="center_horizontal"/>
+    <Spinner
+        android:id="@+id/spinopciones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></Spinner>
+    <!-- boton personalizado -->
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/animaboton"/>
+    <!-- para ver el funcionamiento del scroll view-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Botones"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Botones"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Botones"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Botones"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Botones"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Botones2"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Botones3"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Botones4"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Botones5"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Botones"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Botones"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Botones"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Botones45"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Botones22"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
