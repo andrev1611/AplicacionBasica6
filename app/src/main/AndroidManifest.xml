@@ -9,6 +9,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
+
+        </activity>
+        <activity android:name=".SplashScreen"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -16,5 +20,9 @@
             </intent-filter>
         </activity>
     </application>
-
+    <!--
+        EN EL THEME LE PONEMOS APPCOMPAT.NOACTIONBAR PARA QUE NO MUESTRE LA BARRA SUPERIOR CON EL TITULO
+        AQUÍ CAMBIAMOS EL INTENT FILTER Y LO PASAMOS AL SPLASHSCREEN PARA QUE LA ACTIVIDAD QUE
+        ARRANQUE INICIALMENTE SEA LA DEL SPLASH
+    -->
 </manifest>
